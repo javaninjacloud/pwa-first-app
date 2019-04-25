@@ -1,0 +1,32 @@
+ <div class="col-md-2">
+                <div class="block block-drop-shadow">
+                    <div class="user bg-default bg-light-rtl">
+                        <div class="info">                                                                                
+                            <a href="index.html#" class="informer informer-three">
+                                <span>14 / 255</span>
+                                Messages
+                            </a>                            
+                            <a href="index.html#" class="informer informer-four">
+                                <span>$549.44${applicationScope["profile"]}</span>
+                                Balance
+                            </a>      
+                            <c:if test = "${profile =='offshore'}">     
+                            	<img id="loggedInUser" src="htdocs/img/logo/ironman_512x512.png" width="95px" height="95px"/>
+                            </c:if>  
+                            <c:if test = "${profile !='offshore'}">     
+                            	<img id="loggedInUser" src="htdocs/img/logo/ironman_512x512.png" width="95px" height="95px"/>
+                            </c:if>              
+                            
+                        </div>
+                    </div>
+                    <form:form action="${pageContext.request.contextPath}/logout" id="logoutForm" method="POST">
+                    </form:form>
+                    
+                    <div class="content list-group list-group-icons">
+                        <a href="${pageContext.request.contextPath}/pushMessages" class="list-group-item"><span class="icon-envelope"></span>Push Messages<i class="icon-angle-right pull-right"></i></a>
+                        <a href="component_charts.html" class="list-group-item"><span class="icon-bar-chart"></span>Statistics<i class="icon-angle-right pull-right"></i></a>
+                        <a href="sample_profile.html" class="list-group-item"><span class="icon-cogs"></span>Settings<i class="icon-angle-right pull-right"></i></a>
+                        <a href="#" class="list-group-item" onclick="logout()"><span class="icon-off"></span>Logout<i class="icon-angle-right pull-right"></i></a>
+                    </div>
+                </div> 
+</div>
